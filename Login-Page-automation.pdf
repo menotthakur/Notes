@@ -1,0 +1,16 @@
+Automated Login Testing for Web Applications
+Objective: Automated the login functionality of a web application to ensure seamless user authentication and reduce manual testing effort.
+Tools & Technologies: Selenium WebDriver, Java, TestNG, BrowserStack.
+Key Responsibilities:
+Designed and implemented automation scripts for login workflows using Selenium WebDriver.
+Integrated BrowserStack for cross-browser and cross-platform testing.
+Utilized TestNG for test execution and assertions to validate login functionality.
+Employed CSS and ID selectors to locate web elements dynamically.
+Verified post-login redirection and validated URLs using assertion techniques.
+Achievements:
+Achieved a 70% reduction in manual testing efforts for login functionality.
+Ensured compatibility across multiple browsers (Chrome, Firefox) and platforms (Windows, macOS).
+Enhanced testing reliability with detailed logs and error handling mechanisms.
+
+
+Link : https://www.browserstack.com/guide/login-automation-using-selenium-webdriver
