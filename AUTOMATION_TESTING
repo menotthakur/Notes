@@ -1,0 +1,55 @@
+import org.openqa.selenium.By; // Importing the Selenium By class for locating elements on the web page.
+import org.openqa.selenium.WebDriver; // Importing the WebDriver interface to control the browser.
+import org.openqa.selenium.WebElement; // Importing the WebElement class to represent elements on the page.
+import org.openqa.selenium.chrome.ChromeDriver; // Importing the ChromeDriver class to work with the Chrome browser.
+import org.testng.Assert; // Importing TestNG's Assert class for assertions in the test.
+import org.testng.annotations.Test; // Importing the TestNG annotation for defining test methods.
+
+public class LoginAutomation { // Defining the main class for the test.
+    @Test // Annotation to mark this method as a test case in TestNG.
+    public void loginWithGoogle() { // Defining the login test method for Google login.
+        System.setProperty("webdriver.chrome.driver", "path of driver"); // Setting the system property for the
+                                                                         // ChromeDriver executable.
+        WebDriver driver = new ChromeDriver(); // Initializing the ChromeDriver to control the Chrome browser.
+        driver.manage().window().maximize(); // Maximizing the browser window for better visibility.
+        driver.get("https://www.browserstack.com/users/sign_in"); // Navigating to the login page of BrowserStack.
+
+        WebElement googleLoginButton = driver.findElement(By.cssSelector(".google-login-btn")); // Locating the Google
+                                                                                                // login button by its
+                                                                                                // CSS selector (adjust
+                                                                                                // as per the page's
+                                                                                                // actual class or ID).
+        googleLoginButton.click(); // Clicking the Google login button to initiate login.
+
+        // Switching to the Google login popup or new tab if it appears.
+        String mainWindow = driver.getWindowHandle(); // Storing the main window handle.
+        for (String handle : driver.getWindowHandles()) { // Iterating through all open windows.
+            if (!handle.equals(mainWindow)) { // Identifying the new popup or tab.
+                driver.switchTo().window(handle); // Switching to the Google login window.
+                break;
+            }
+        }
+
+        // Locating and interacting with the Google login form.
+        WebElement emailField = driver.findElement(By.id("identifierId")); // Locating the email field in the Google
+                                                                           // login form.
+        emailField.sendKeys("your_google_email@gmail.com"); // Entering your Google email.
+        driver.findElement(By.id("identifierNext")).click(); // Clicking the "Next" button.
+
+        // Waiting for the password field to appear (can use explicit waits for better
+        // handling).
+        WebElement passwordField = driver.findElement(By.name("password")); // Locating the password field in the Google
+                                                                            // login form.
+        passwordField.sendKeys("your_google_password"); // Entering your Google password.
+        driver.findElement(By.id("passwordNext")).click(); // Clicking the "Next" button to proceed.
+
+        // Switching back to the main window after completing Google login.
+        driver.switchTo().window(mainWindow); // Switching back to the main window.
+
+        String actualUrl = "https://live.browserstack.com/dashboard"; // Defining the expected URL after a successful
+                                                                      // login.
+        String expectedUrl = driver.getCurrentUrl(); // Getting the current URL after login.
+
+        Assert.assertEquals(expectedUrl, actualUrl); // Validating if the login was successful by comparing URLs.
+    }
+}
