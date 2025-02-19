@@ -59,11 +59,11 @@ User → API Server → Scheduler → etcd (Stores state)
 - **Kubernetes vs Docker** → Kubernetes provides clustering, auto-healing, and scalability.
 - **Two Main Components** → Control Plane (manages clusters) and Data Plane (runs workloads).
 - **Important Control Plane Components**:
-  - **API Server** → Gateway to Kubernetes.
-  - **Scheduler** → Assigns workloads.
-  - **etcd** → Stores cluster state.
-  - **Controller Manager** → Maintains desired state.
-  - **Cloud Controller Manager** → Integrates with cloud providers.
+  - **API Server** → Gateway to Kubernetes, processes external requests.
+  - **Scheduler** → Assigns workloads to worker nodes based on resource availability.
+  - **etcd** → Stores the cluster’s configuration and state as key-value pairs.
+  - **Controller Manager** → Ensures the desired state of the cluster by managing controllers like ReplicaSet.
+  - **Cloud Controller Manager** → Integrates Kubernetes with cloud providers for storage, networking, and load balancing.
 - **Worker Node Components**:
   - **Kubelet** → Ensures pods are running.
   - **Kube Proxy** → Manages networking.
