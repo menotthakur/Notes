@@ -2,22 +2,13 @@
 
 ## 📌 Cornell Notes Format
 
-| **Key Points** | **Detailed Notes** | **Summary & Recall Cues** |
-|--------------|----------------|----------------------|
-| **Docker vs. Kubernetes** | - Docker runs containers individually.  
-  - Kubernetes manages multiple containers via pods.  
-  - Kubernetes provides auto-scaling, self-healing, and enterprise-level support. | Kubernetes is a container orchestrator, not just a container runtime. |
-| **What is a Pod?** | - The smallest deployable unit in Kubernetes.  
-  - Can contain one or multiple containers.  
-  - Containers in a pod share networking and storage. | Pods are a wrapper around containers for better management. |
-| **Why Pods Instead of Direct Containers?** | - Provides declarative specifications via YAML.  
-  - Enables shared networking and storage among containers in a pod.  
-  - Standardizes container deployment. | Pods enable Kubernetes to manage containers effectively. |
-| **Installing Kubernetes Locally** | - Use Minikube for local Kubernetes clusters.  
-  - Alternatives: K3s, Kind, MicroK8s. | Minikube is the simplest option for local Kubernetes. |
-| **Deploying Your First Pod** | - Write a `pod.yaml` specification.  
-  - Use `kubectl apply -f pod.yaml`.  
-  - Verify using `kubectl get pods`. | Kubernetes pods are created using YAML specifications. |
+| **Key Points**                  | **Detailed Notes**                                                                 | **Summary & Recall Cues**                              |
+|---------------------------------|----------------------------------------------------------------------------------|------------------------------------------------------|
+| **Docker vs. Kubernetes**       | - Docker runs containers individually. <br> - Kubernetes manages multiple containers via pods. <br> - Kubernetes provides auto-scaling, self-healing, and enterprise-level support. | Kubernetes is a container orchestrator, not just a container runtime. |
+| **What is a Pod?**              | - The smallest deployable unit in Kubernetes. <br> - Can contain one or multiple containers. <br> - Containers in a pod share networking and storage. | Pods are a wrapper around containers for better management. |
+| **Why Pods Instead of Direct Containers?** | - Provides declarative specifications via YAML. <br> - Enables shared networking and storage among containers in a pod. <br> - Standardizes container deployment. | Pods enable Kubernetes to manage containers effectively. |
+| **Installing Kubernetes Locally** | - Use Minikube for local Kubernetes clusters. <br> - Alternatives: K3s, Kind, MicroK8s. | Minikube is the simplest option for local Kubernetes. |
+| **Deploying Your First Pod**    | - Write a `pod.yaml` specification. <br> - Use `kubectl apply -f pod.yaml`. <br> - Verify using `kubectl get pods`. | Kubernetes pods are created using YAML specifications. |
 
 ## 🧠 Mind Map (ASCII Representation)
 
