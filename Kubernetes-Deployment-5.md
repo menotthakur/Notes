@@ -4,18 +4,10 @@
 
 | **Key Points** | **Detailed Notes** | **Summary & Recall Cues** |
 |--------------|----------------|----------------------|
-| **Containers vs. Pods vs. Deployments** | - Containers are individual runtime environments.  
-  - Pods group one or more containers and share networking & storage.  
-  - Deployments manage and scale multiple Pods. | Deployment ensures high availability and scaling. |
-| **Why Use Deployments?** | - Provides auto-healing and auto-scaling.  
-  - Allows rolling updates and zero downtime deployments.  
-  - Uses ReplicaSets to ensure desired Pod count. | Deployments improve reliability & uptime. |
-| **ReplicaSets & Their Role** | - Ensures the desired number of Pod replicas run.  
-  - If a Pod is deleted, ReplicaSet recreates it automatically.  
-  - Works with Deployments to maintain cluster state. | ReplicaSets guarantee availability & redundancy. |
-| **Deployment YAML Example** | - Defined in YAML format.  
-  - Specifies the number of replicas, container image, ports, etc.  
-  - Managed using `kubectl apply -f deployment.yaml` | YAML defines Kubernetes resources declaratively. |
+| **Containers vs. Pods vs. Deployments** | - Containers are individual runtime environments.<br>- Pods group one or more containers and share networking & storage.<br>- Deployments manage and scale multiple Pods. | Deployment ensures high availability and scaling. |
+| **Why Use Deployments?** | - Provides auto-healing and auto-scaling.<br>- Allows rolling updates and zero downtime deployments.<br>- Uses ReplicaSets to ensure desired Pod count. | Deployments improve reliability & uptime. |
+| **ReplicaSets & Their Role** | - Ensures the desired number of Pod replicas run.<br>- If a Pod is deleted, ReplicaSet recreates it automatically.<br>- Works with Deployments to maintain cluster state. | ReplicaSets guarantee availability & redundancy. |
+| **Deployment YAML Example** | - Defined in YAML format.<br>- Specifies the number of replicas, container image, ports, etc.<br>- Managed using `kubectl apply -f deployment.yaml`. | YAML defines Kubernetes resources declaratively. |
 
 ## 🧠 Mind Map (ASCII Representation)
 
