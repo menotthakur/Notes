@@ -92,9 +92,3 @@ With observability, the company can detect & fix failures before they impact cus
 - **Key tools:** Prometheus (Metrics), EFK (Logs), Jaeger (Traces).
 - Observability ensures **better uptime, debugging, and performance monitoring**.
 
-### **Revision Tips:**
-- Use the Cornell notes for structured learning.
-- Refer to flowcharts to understand data flow.
-- Revise flashcards for quick memory recall.
-- Read real-world examples to relate concepts.
-
