@@ -1,5 +1,5 @@
 
-## Detailed Notes from the Video
+
 
 ## Introduction to Kubernetes
 - Kubernetes is essential for a long-term career in DevOps.
@@ -47,10 +47,3 @@
 ### Final Thoughts
 - Kubernetes is evolving and backed by a strong community, making it a reliable choice for container orchestration.
 - Stay committed to learning Kubernetes, as it is a valuable skill for DevOps professionals.
-
-### Call to Action
-- Watch previous videos on Docker and containers to build a strong foundation.
-- Stay tuned for upcoming videos on Kubernetes architecture and core concepts.
-- Like, comment, and share the video to support the channel.
-
-Thank you for watching! See you in the next video. 
