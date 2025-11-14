@@ -3,6 +3,11 @@ name: Manual Approval Test Workflow
 on:
   workflow_dispatch:
 
+# 🔥 Add this permission block for private repos
+permissions:
+  issues: write
+  contents: read
+
 jobs:
 
   build:
@@ -17,14 +22,16 @@ jobs:
           sleep 3
           echo "Build complete!"
 
+
   approval:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: trstringer/manual-approval@v1
         with:
-          secret: ${{ secrets.GITHUB_TOKEN }}
-          approvers: menotthakur  # put your own username
+          secret: ${{ secrets.GITHUB_TOKEN }}   # FIXED
+          approvers: menotthakur               # your username
+
 
   deploy:
     needs: approval
