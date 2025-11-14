@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: trstringer/manual-approval@v1
         with:
-          secret: ${{ secrets.GITHUB_TOKEN }}
+          secret: ${{ secrets.TOKEN }}
           approvers: menotthakur  # put your own username
 
   deploy:
